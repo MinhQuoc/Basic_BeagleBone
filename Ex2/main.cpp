@@ -1,4 +1,4 @@
-
+//file header here???
 #include <stdio.h>
 #include <unistd.h>
 #include <termios.h>
@@ -22,14 +22,14 @@ int main(void)
 
   // Init serial.
   openSerial(gi_numPort);
-  setBaudrate(gi_numPort,B9600);
-
+  setBaudrate(gi_numPort,B9600); 
+	// how could the user know input x to close port???
   while(gi_status) // gi_status = 0 when recieve 'x'.
   {
-    gi_bytesRead = readUART(gi_numPort, gc_readBuffer ,100);
+    gi_bytesRead = readUART(gi_numPort, gc_readBuffer ,100);//100 here is for what??-> need explain or use define macro
     if (gi_bytesRead > 0) // Do nothing if recieve nothing.
     {
-      if (gc_readBuffer[0] == 'x') // Close port
+      if (gc_readBuffer[0] == 'x') // Close port //you can use define macro here. Fox ex: #define CHAR_INPUT_EXIT 'x'
       {
         printf("\n ------------- Close port ----------- \n");
         closeUART(gi_numPort);
