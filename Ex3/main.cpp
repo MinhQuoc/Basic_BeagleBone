@@ -9,7 +9,7 @@
 #include "../lib/adc/adc.h"
 #include "../lib/uart/uart.h"
 #include "../lib/gpio/SimpleGPIO.h"
-
+//Should use define macro here for GPIO 72 74 76 78
 int main(void)
 {
   int gi_gpioLED[4]={72,74,76,78};
