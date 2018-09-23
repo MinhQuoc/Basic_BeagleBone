@@ -1,4 +1,4 @@
-
+//--> should have header file here and summary the purpose of this file
 #include <stdio.h>
 #include <unistd.h>
 #include <termios.h>
@@ -32,7 +32,7 @@ int main(void)
 
   while (gi_status) // gi_status = 0 when recieve 'x'.
   {
-
+    // Good --> have a simple UI for user 
     printf("Please type : \"FIRST_PERIOD FIRST_DUTY SECOND_PERIOD SECOND_DUTY \" \n");
     printf("            : \"P1 D1 P2 D2 \" \n");
     printf("By UART1 P9.24 (TX) P9.26 (RX) \n");
